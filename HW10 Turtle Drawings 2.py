@@ -114,28 +114,38 @@ allturtlecolors = ["black", "blue", "brown", "cyan", "gray", "green", "lightblue
 # spirograph(circleCount, circleRadii, Circlecolor1, Cirlcecolor2)
 
 def smileyFaces(color):
-    t.penup()
-    t.goto(-300, 200)
-    t.pendown()
-    t.color("black", color)
-    t.begin_fill()
-    t.circle(100)
-    t.end_fill()
-    t.penup()
-    t.goto(-330,280)
-    t.pendown()
-    t.setheading(270)
-    t.circle(35, 180)
-    t.penup()
-    t.goto(-330,330)
-    t.pendown()
-    t.dot(20)
-    t.penup()
-    t.goto(-260,330)
-    t.pendown()
-    t.dot(20)
+    circlex = -300
+    smilex = -330
+    eye1x = -330
+    eye2x = -260
+    for i in range(3)
+        t.penup()
+        t.goto(circlex, 200)
+        t.pendown()
+        t.color("black", color)
+        t.begin_fill()
+        t.circle(100)
+        t.end_fill()
+        t.penup()
+        t.goto(smilex,280)
+        t.pendown()
+        t.setheading(270)
+        t.circle(35, 180)
+        t.penup()
+        t.goto(eye1x,330)
+        t.pendown()
+        t.dot(20)
+        t.penup()
+        t.goto(eye2x,330)
+        t.pendown()
+        t.dot(20)
+        circlex += 300
+        smilex += 300
+        eye1x += 300
+        eye2x += 300
 
 smileyfaceColor = screen.textinput("Smiley Face Color", "What color should the smiley faces be?")
 smileyFaces(smileyfaceColor)
+
 
 screen.exitonclick()
