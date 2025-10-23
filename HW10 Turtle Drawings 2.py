@@ -118,7 +118,7 @@ def smileyFaces(color):
     smilex = -330
     eye1x = -330
     eye2x = -260
-    for i in range(3)
+    for i in range(3):
         t.penup()
         t.goto(circlex, 200)
         t.pendown()
